@@ -1,0 +1,16 @@
+{
+  "name": "spigot-updater",
+  "version": "1.0.0",
+  "description": "Minecraft server and plugins updater",
+  "main": "index.js",
+  "author": "Kasper Seweryn <casper@wvffle.net>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "commander": "^2.19.0",
+    "signale": "^1.3.0"
+  },
+  "bin": {
+    "sup": "bin/sup"
+  }
+}
