@@ -19,13 +19,17 @@ Options:
 
 ```bash
 #!/bin/bash
-VERSION=$1
 
-[[ "$#" -eq 0 ]] && {
-  VERSION="1.12.2"
+# Start particular version
+[[ "$#" -eq 1 ]] && {
+  sup -v $1
 }
 
-sup -v $VERSION -c $CORE
+# Start latest version
+[[ "$#" -eq 0 ]] && {
+  sup
+}
+
 cp cores/paper-$VERSION.jar server.jar
 java -Xmx1G -Xms1G -jar server.jar
 ```
